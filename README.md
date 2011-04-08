@@ -7,3 +7,8 @@ reconnected.
 ### Chromium Nightly Update
 
 Bash script to update Chromium to latest nightly build (OSX).
+
+### puu.sh CLI
+
+Bash script to upload to puush.me from the command line.
+
