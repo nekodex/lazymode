@@ -1,11 +1,12 @@
 #!/usr/bin/env sh
 BASE=http://build.chromium.org/f/chromium/snapshots/chromium-rel-mac/
+LATEST=`curl -s $BASE/LATEST`
 
-cd /tmp
-curl -O $BASE`curl $BASE/LATEST`/chrome-mac.zip
-unzip chrome-mac.zip 
-cd chrome-mac/
+echo "Updating Chromium to $LATEST..."
+echo "Downloading..."
+curl -# $BASE$LATEST/chrome-mac.zip -o /tmp/chrome-mac.zip
+echo "Extracting and moving into place..."
+cd /tmp && unzip -q chrome-mac.zip
 rm -rf /Applications/Chromium.app/
-ditto Chromium.app/ /Applications/Chromium.app/
-cd ..
-rm -rf chrome-mac*
+mv chrome-mac/Chromium.app/ /Applications/
+rm -rf /tmp/chrome-mac*
