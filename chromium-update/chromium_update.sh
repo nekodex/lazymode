@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 BASE=http://build.chromium.org/f/chromium/snapshots/chromium-rel-mac/
 
 cd /tmp

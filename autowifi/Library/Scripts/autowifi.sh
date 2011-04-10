@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ETH=en0
 AIR=en1
 
