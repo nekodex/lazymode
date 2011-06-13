@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-BASE=http://build.chromium.org/f/chromium/snapshots/chromium-rel-mac/
+BASE=http://build.chromium.org/f/chromium/snapshots/Mac/
 LATEST=`curl -s $BASE/LATEST`
 
 echo "Updating Chromium to $LATEST..."
